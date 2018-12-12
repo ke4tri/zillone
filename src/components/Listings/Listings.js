@@ -3,7 +3,7 @@ import './listings.scss';
 
 class Listings extends React.Component {
   render() {
-    return(
+    return (
       <div className="listings">
         <h2>Listings</h2>
       </div>
