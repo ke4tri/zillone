@@ -5,7 +5,7 @@ import connection from '../helpers/data/connection';
 import Auth from '../components/Auth/Auth';
 import Listings from '../components/Listings/Listings';
 import Buildings from '../components/Buildings/buildings';
-import ListingForm from '../components/ListingForm/listingform';
+// import ListingForm from '../components/ListingForm/listingform';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import './App.scss';
 import authRequests from '../helpers/data/authRequests';
@@ -58,6 +58,7 @@ class App extends Component {
       <div className="App">
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
         <Listings />
+        <Buildings />
         {/* <Buildings />
         <ListingForm /> */}
       </div>
