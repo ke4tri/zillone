@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Button } from 'reactstrap';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
     console.log(this);
-    return (
+    return ( // jsx is what return is written in
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
