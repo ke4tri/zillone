@@ -1,5 +1,5 @@
 import React from 'react';
-import './Listings.scss';
+import './listings.scss';
 
 class Listings extends React.Component {
   render() {
