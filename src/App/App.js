@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import connection from '../helpers/data/connection';
 import Auth from '../components/Auth/Auth';
+import Listings from '.'
 import './App.scss';
 // import { createConnection } from 'net';
-
 
 class App extends Component {
   componentDidMount() {
