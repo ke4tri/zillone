@@ -9,14 +9,22 @@ import ListingForm from '../components/ListingForm/listingform';
 import MyNavbar from '../components/MyNavbar/myNavbar';
 import './App.scss';
 import authRequests from '../helpers/data/authRequests';
+import listingRequests from '../helpers/data/listingRequests';
 
 class App extends Component {
   state = {
     authed: false,
+    listings: [],
   }
 
   componentDidMount() {
     connection();
+    listingRequests.getRequest()
+      .then((listings) => {
+        this.setState({ listings });
+      })
+      .catch(err => console.error('err with listing GET', err));
+
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
@@ -60,7 +68,7 @@ class App extends Component {
       <div className="App">
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
         <div className="row">
-          <Listings />
+          <Listings listings={this.state.listings}/>
           <Buildings />
         </div>
         <div className="row">
