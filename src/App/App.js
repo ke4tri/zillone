@@ -50,18 +50,24 @@ class App extends Component {
       return (
         <div className="App">
           <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
-          <Auth isAuthenticated={this.isAuthenticated}/>
+          <div className="row">
+           <Auth isAuthenticated={this.isAuthenticated}/>
+          </div>
         </div>
       );
     }
     return (
       <div className="App">
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
-        <Listings />
-        <Buildings />
+        <div className="row">
+          <Listings />
+          <Buildings />
+        </div>
+        <div className="row">
         <ListingForm />
         {/* <Buildings />
         <ListingForm /> */}
+        </div>
       </div>
     );
   }
