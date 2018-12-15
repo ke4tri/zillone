@@ -1,6 +1,8 @@
 import React from 'react';
-import './listingForm.scss';
-import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import './listingform.scss';
+import {
+  Col, Row, Button, Form, FormGroup, Label, Input, FormText,
+} from 'reactstrap';
 
 class listingForm extends React.Component {
   render() {
@@ -11,13 +13,13 @@ class listingForm extends React.Component {
           <Col md={6}>
             <FormGroup>
               <Label for="price">Price</Label>
-              <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+              <Input type="price" name="price" id="examplePrice" placeholder="Price to search" />
             </FormGroup>
           </Col>
           <Col md={6}>
             <FormGroup>
               <Label for="address">Address</Label>
-              <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+              <Input type="address" name="address" id="exampleAddress" placeholder="Address search" />
             </FormGroup>
           </Col>
         </Row>
