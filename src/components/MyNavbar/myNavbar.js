@@ -9,10 +9,10 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-import './myNavbar.scss';
+import './MyNavbar.scss';
 
 class MyNavbar extends React.Component {
-  static PropTypes = {
+  static propTypes = {
     isAuthed: PropTypes.bool,
     logoutClickEvent: PropTypes.func,
   }
